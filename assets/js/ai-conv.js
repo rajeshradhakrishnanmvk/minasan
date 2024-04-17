@@ -35,7 +35,7 @@ return fetchConversationFromLLMMasterPrompt().then(master_prompt => {
 
 async function fetchConversationsFromGemma(master_prompt, examples_prompt) {
     const gemmaResponse = await fetch('https://rajeshradhakrishnanmvk.github.io/minasan/assets/json/conv-1.txt');
-    const data = await gemmaResponse.text().json();
+    const data = await JSON.parse(gemmaResponse.text());
     console.log(data);
     return data;
 
