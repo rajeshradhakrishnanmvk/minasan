@@ -1,10 +1,10 @@
 const fetchConversationFromLLMPrompt = async () => {
-    const fileName = 'prompts/jn-conversation.txt'
+    const fileName = '{{site.baseurl}}/assets/prompts/jn-conversation.txt'
     const response = await fetch(fileName); 
     return await response.text();
 }
 const fetchConversationFromLLMMasterPrompt = async () => {
-    const fileName = 'prompts/master.txt'
+    const fileName = '{{site.baseurl}}/assets/prompts/master.txt'
     const response = await fetch(fileName); 
     return await response.text();
 }
@@ -34,34 +34,7 @@ return fetchConversationFromLLMMasterPrompt().then(master_prompt => {
 }
 
 async function fetchConnectionsFromGemma(master_prompt, examples_prompt) {
-    const response = await fetch('https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "contents": [
-                {
-                    // "role": "model",
-                    // "parts": [
-                    //     {
-                    //         "text": master_prompt
-                    //     }
-                    // ],
-                    "role": "user",
-                    "parts": [
-                        {
-                            "text": examples_prompt
-                        }
-                    ]
-                }
-            ]
-        })
-    });
-   
-    const data = await response.json();
-    //console.log(data.candidates[0].content.parts[0].text);
-    //saveToLocalStorage('gemma-' + gamecount, data.candidates[0].content.parts[0].text);
+    const gemmaResponse = await fetch('{{site.baseurl}}/assets/json/conv-1.txt');
     return data.candidates[0].content.parts[0].text;
 
 }
