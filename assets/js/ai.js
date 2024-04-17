@@ -11,8 +11,8 @@ const fetchFromLLMMasterPrompt = async () => {
 function fetchFromLLM(){
     fetchFromLLMMasterPrompt().then(master_prompt => {
         fetchFromLLMPrompt().then(examples_prompt => {
-            console.log(master_prompt);
-            console.log(examples_prompt);
+            //console.log(master_prompt);
+            //console.log(examples_prompt);
             fetchConnectionsFromGemma(master_prompt, examples_prompt).then((gemmaresponse) => {
                 gamecount++; //global variable to keep track of the number of games played, ref games.js
                 saveToLocalStorage('gemma-' + gamecount,gemmaresponse);
@@ -33,8 +33,8 @@ function fetchFromLLM(){
 
 async function fetchConnectionsFromGemma(master_prompt, examples_prompt) {
     const gemmaResponse = await fetch('https://rajeshradhakrishnanmvk.github.io/minasan/assets/json/gemma-1.txt');
-    console.log(gemmaResponse)
-    const data = await gemmaResponse.json();
+    const data = await gemmaResponse.text();
+    console.log(data);
     return data;
 
 }
