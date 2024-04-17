@@ -1,10 +1,10 @@
 const fetchFromLLMPrompt = async () => {
-    const fileName = '{{site.baseurl}}/assets/prompts/jn.txt'
+    const fileName = 'https://rajeshradhakrishnanmvk.github.io/minasan/assets/prompts/jn.txt'
     const response = await fetch(fileName); 
     return await response.text();
 }
 const fetchFromLLMMasterPrompt = async () => {
-    const fileName = '{{site.baseurl}}/assets/prompts/master.txt'
+    const fileName = 'https://rajeshradhakrishnanmvk.github.io/minasan/prompts/master.txt'
     const response = await fetch(fileName); 
     return await response.text();
 }
@@ -32,7 +32,7 @@ function fetchFromLLM(){
 }
 
 async function fetchConnectionsFromGemma(master_prompt, examples_prompt) {
-    const gemmaResponse = await fetch('{{site.baseurl}}/assets/json/gemma-1.txt');
+    const gemmaResponse = await fetch('https://rajeshradhakrishnanmvk.github.io/minasan/assets/json/gemma-1.txt');
     const data = await gemmaResponse.json();
     return data.candidates[0].content.parts[0].text;
 
