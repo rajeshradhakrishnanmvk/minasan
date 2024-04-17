@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-feed
+title: Janapnese N5 Connection Game
+description: Inspired by Connection Game, this game is designed to help you learn Japanese N5 vocabulary.
+author: Rajesh Radhakrishnan
