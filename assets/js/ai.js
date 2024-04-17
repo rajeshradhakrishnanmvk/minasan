@@ -4,7 +4,7 @@ const fetchFromLLMPrompt = async () => {
     return await response.text();
 }
 const fetchFromLLMMasterPrompt = async () => {
-    const fileName = 'https://rajeshradhakrishnanmvk.github.io/minasan/prompts/master.txt'
+    const fileName = 'https://rajeshradhakrishnanmvk.github.io/minasan/assets/prompts/master.txt'
     const response = await fetch(fileName); 
     return await response.text();
 }
