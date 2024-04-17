@@ -33,7 +33,8 @@ function fetchFromLLM(){
 
 async function fetchConnectionsFromGemma(master_prompt, examples_prompt) {
     const gemmaResponse = await fetch('https://rajeshradhakrishnanmvk.github.io/minasan/assets/json/gemma-1.txt');
+    console.log(gemmaResponse)
     const data = await gemmaResponse.json();
-    return data.candidates[0].content.parts[0].text;
+    return data;
 
 }
