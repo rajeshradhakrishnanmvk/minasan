@@ -1,1 +1,16 @@
-"```json\n[\n  {\n    \"Pattern\": \"Days of the Week\",\n    \"Japanese\": \"げつようび (getsuyoubi), かようび (kayoubi), すいようび (suiyoubi), もくようび (mokuyoubi), きんようび (kinyoubi), どようび (doyoubi), にちようび (nichiyoubi)\",\n    \"English\": \"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday\"\n  },\n  {\n    \"Pattern\": \"Months of the Year\",\n    \"Japanese\": \"いちがつ (ichigatsu), にがつ (nigatsu), さんがつ (sangatsu), しがつ (shigatsu), ごがつ (gogatsu), ろくがつ (rokugatsu), しちがつ (shichigatsu), はちがつ (hachigatsu), くがつ (kugatsu), じゅうがつ (juugatsu), じゅういちがつ (juuichigatsu), じゅうнигаつ (juunigatsu)\",\n    \"English\": \"January, February, March, April, May, June, July, August, September, October, November, December\"\n  },\n  {\n    \"Pattern\": \"Transportation\",\n    \"Japanese\": \"くるま (kuruma), じょうたつしゃ (joutatsusha), でんしゃ (densha), ひこうき (hikooki), ふね (fune)\",\n    \"English\": \"car, bus, train, airplane, ship\"\n  },\n  {\n    \"Pattern\": \"Colors\",\n    \"Japanese\": \"あか (aka), あお (ao), きいろ (kiiro), みどり (midori), むらさき (murasaki)\",\n    \"English\": \"red, blue, yellow, green, purple\"\n  }\n]\n```"
+[
+    {
+    "Pattern":"Days of the Week",
+    "Japanese": "げつようび (getsuyoubi), かようび (kayoubi), すいようび (suiyoubi), もくようび (mokuyoubi), きんようび (kinyoubi), どようび (doyoubi), にちようび (nichiyoubi)",
+    "English": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+    },
+    {
+    "Pattern": "Months of the Year",
+    "Japanese": "いちがつ (ichigatsu), にがつ (nigatsu), さんがつ (sangatsu), しがつ (shigatsu), ごがつ (gogatsu), ろくがつ (rokugatsu), しちがつ (shichigatsu), はちがつ (hachigatsu), くがつ (kugatsu), じゅうがつ (juugatsu), じゅういちがつ (juuichigatsu), じゅうнигаつ (juunigatsu)",
+    "English": "January, February, March, April, May, June, July, August, September, October, November, December"},
+    {
+    "Pattern": "Transportation",
+    "Japanese": "くるま (kuruma), じょうたつしゃ (joutatsusha), でんしゃ (densha), ひこうき (hikooki), ふね (fune)","English": "car, bus, train, airplane, ship"},{"Pattern": "Colors","Japanese": "あか (aka), あお (ao), きいろ (kiiro), みどり (midori), むらさき (murasaki)",
+    "English": "red, blue, yellow, green, purple"
+    }
+]
