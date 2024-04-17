@@ -16,7 +16,7 @@ return fetchConversationFromLLMMasterPrompt().then(master_prompt => {
         examples_prompt= examples_prompt.replace(/\$\(words\)/g, words);
         //console.log('Master Prompt:', master_prompt);
         //console.log('Examples Prompt:', examples_prompt);
-        return fetchConnectionsFromGemma(master_prompt, examples_prompt).then((gemmaresponse) => {
+        return fetchConversationsFromGemma(master_prompt, examples_prompt).then((gemmaresponse) => {
             console.log('Conversation fetched from Gemma!');
             //console.log('Gemma Response:', gemmaresponse);
             return gemmaresponse;
@@ -33,7 +33,7 @@ return fetchConversationFromLLMMasterPrompt().then(master_prompt => {
 });
 }
 
-async function fetchConnectionsFromGemma(master_prompt, examples_prompt) {
+async function fetchConversationsFromGemma(master_prompt, examples_prompt) {
     const gemmaResponse = await fetch('https://rajeshradhakrishnanmvk.github.io/minasan/assets/json/conv-1.txt');
     const data = await gemmaResponse.text();
     console.log(data);
