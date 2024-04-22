@@ -1,11 +1,11 @@
 [
     {
-        "Pattern": "Lesson-1A".
+        "Pattern": "Lesson-1A",
         "Japanese": "わたし (watashi), あなた (anata), あのかた (ano kata), さん (san)",
         "English": "I, you, that person, Mr/Ms/Mrs"
     },
     {
-        "Pattern": "Lesson-1B"
+        "Pattern": "Lesson-1B",
         "Japanese": "がくせい (gakusei), かいしゃいん (kaishain), ぎんこういん (ginkōin), きゅうさい (kyū sai)",
         "English": "student, company employee, bank employee, 9 years old"
     },

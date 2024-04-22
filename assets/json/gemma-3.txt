@@ -6,7 +6,7 @@
     },
     {
         "Pattern": "Lesson-1F",
-        "Japanese": "おなまえは？ (o-namae wa?), ～さんです (～san desu), せんせい (sensei), きょうし (kyōshi)"
+        "Japanese": "おなまえは？ (o-namae wa?), ～さんです (～san desu), せんせい (sensei), きょうし (kyōshi)",
         "English": "May I have your name? This is Mr./Mrs Rajesh, instructor, teacher"
     },
     {
@@ -18,6 +18,5 @@
         "Pattern": "Lesson-1H",
         "Japanese": "かんこく (kankoku), タイ (tai), ちゅうごく (chūgoku), ドイツ (doitsu)",
         "English": "South Korea, Thailand, China, Germany"
-    },
-    
+    }
 ]
