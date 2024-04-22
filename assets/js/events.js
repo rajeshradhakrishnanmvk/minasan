@@ -35,7 +35,7 @@ function nextPage() {
         backend(nextPage);
     } else {
         console.log("No next page available.");
-        fetchFromLLM();
+        backend(nextPage);
     }
 }
 

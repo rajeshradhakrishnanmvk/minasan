@@ -7,7 +7,7 @@
     {
         "Pattern": "Lesson-1F",
         "Japanese": "おなまえは？ (o-namae wa?), ～さんです (～san desu), せんせい (sensei), きょうし (kyōshi)",
-        "English": "May I have your name? This is Mr./Mrs Rajesh, instructor, teacher"
+        "English": "May I have your name?, This is Mr./Mrs Rajesh, instructor, teacher"
     },
     {
         "Pattern": "Lesson-1G",
