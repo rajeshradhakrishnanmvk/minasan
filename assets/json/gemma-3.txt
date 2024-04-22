@@ -1,0 +1,23 @@
+[
+    {
+        "Pattern": "Lesson-1E",
+        "Japanese": "はじめまして (hajimemashite), インドから きました (indo kara kimashita), どうぞよろしく (dōzo yoroshiku), しつれいします (shitsurei shimasu)",
+        "English": "how do you do?, I'm from India, Please to meet you, Excuse me"
+    },
+    {
+        "Pattern": "Lesson-1F",
+        "Japanese": "おなまえは？ (o-namae wa?), ～さんです (～san desu), せんせい (sensei), きょうし (kyōshi)"
+        "English": "May I have your name? This is Mr./Mrs Rajesh, instructor, teacher"
+    },
+    {
+        "Pattern": "Lesson-1G",
+        "Japanese": "アメリカ (amerika), イギリス (igirisu), インド (indo),インドネシア (indoneshia)",
+        "English": "U.S.A, U.K., India, Indonesia"
+    },
+    {
+        "Pattern": "Lesson-1H",
+        "Japanese": "かんこく (kankoku), タイ (tai), ちゅうごく (chūgoku), ドイツ (doitsu)",
+        "English": "South Korea, Thailand, China, Germany"
+    },
+    
+]

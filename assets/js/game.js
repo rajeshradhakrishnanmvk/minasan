@@ -133,7 +133,7 @@ const fetchConnectionsFromStorage = async (key) => {
     console.log("fetchConnectionsFromStorage: ",'gemma-' + key);
     var data = getFromLocalStorage('gemma-' + key);
     if (!data) {
-        fetchFromLLM();
+        fetchFromLLM(key);
     }
     else {
         data = data.toLowerCase(); // Convert data to lowercase

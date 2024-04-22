@@ -10,7 +10,12 @@
     "English": "January, February, March, April, May, June, July, August, September, October, November, December"},
     {
     "Pattern": "Transportation",
-    "Japanese": "くるま (kuruma), じょうたつしゃ (joutatsusha), でんしゃ (densha), ひこうき (hikooki), ふね (fune)","English": "car, bus, train, airplane, ship"},{"Pattern": "Colors","Japanese": "あか (aka), あお (ao), きいろ (kiiro), みどり (midori), むらさき (murasaki)",
+    "Japanese": "くるま (kuruma), じょうたつしゃ (joutatsusha), でんしゃ (densha), ひこうき (hikooki), ふね (fune)",
+    "English": "car, bus, train, airplane, ship"},
+    
+    {
+    "Pattern": "Colors",
+    "Japanese": "あか (aka), あお (ao), きいろ (kiiro), みどり (midori), むらさき (murasaki)",
     "English": "red, blue, yellow, green, purple"
     }
 ]

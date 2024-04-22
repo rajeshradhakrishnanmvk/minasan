@@ -1,0 +1,22 @@
+[
+    {
+        "Pattern": "Lesson-1A".
+        "Japanese": "わたし (watashi), あなた (anata), あのかた (ano kata), さん (san)",
+        "English": "I, you, that person, Mr/Ms/Mrs"
+    },
+    {
+        "Pattern": "Lesson-1B"
+        "Japanese": "がくせい (gakusei), かいしゃいん (kaishain), ぎんこういん (ginkōin), きゅうさい (kyū sai)",
+        "English": "student, company employee, bank employee, 9 years old"
+    },
+    {
+        "Pattern": "Lesson-1C",
+        "Japanese": "いしゃ (isha), がくしゃ (gakusha), だいがく (daigaku), びょういん (byōin)",
+        "English": "doctor, scholar, university, hospital"
+    },
+    {
+        "Pattern": "Lesson-1D",
+        "Japanese": "だれ (dare), なんさい (nansai), はい (hai), いいえ (iie)",
+        "English": "who, how old, yes, no"
+    }
+]
