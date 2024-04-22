@@ -125,43 +125,35 @@ function getFromLocalStorage(key) {
     return JSON.parse(data);
 }
 // Step 3
-const fetchConnectionsFromStorage = async (key) => {
-   
+const fetchConnectionsFromStorage = async (data) => {
     const pattern = [];
     const solutions = [];
     const meanings = [];
-    console.log("fetchConnectionsFromStorage: ",'gemma-' + key);
-    var data = getFromLocalStorage('gemma-' + key);
-    if (!data) {
-        fetchFromLLM();
-    }
-    else {
-        data = data.toLowerCase(); // Convert data to lowercase
-        data = JSON.parse(cleanJson(data));
-        
-        if (data && data.patterns) {
-            data = data.patterns;
-        } 
-        // Assuming the JSON has an array of objects with pattern, solutions, and meanings properties
-        if (data && data.length > 0) {
-            data.forEach(obj => {
-                if (Array.isArray(obj.japanese)) {
-                    pattern.push(obj.pattern.slice(0, 4));
-                } else {
-                    pattern.push(obj.pattern.split(", ").map(item => item.trim()).slice(0, 4));
-                }
-                if (Array.isArray(obj.japanese)) {
-                    solutions.push(obj.japanese.slice(0, 4));
-                } else {
-                    solutions.push(obj.japanese.split(", ").map(item => item.trim()).slice(0, 4));
-                }
-                if (Array.isArray(obj.english)) {
-                    meanings.push(obj.english.slice(0, 4));
-                } else {
-                    meanings.push(obj.english.split(", ").map(item => item.trim()).slice(0, 4));
-                }
-            });
-        }
+    data = data.toLowerCase(); // Convert data to lowercase
+    data = JSON.parse(cleanJson(data));
+    
+    if (data && data.patterns) {
+        data = data.patterns;
+    } 
+    // Assuming the JSON has an array of objects with pattern, solutions, and meanings properties
+    if (data && data.length > 0) {
+        data.forEach(obj => {
+            if (Array.isArray(obj.japanese)) {
+                pattern.push(obj.pattern.slice(0, 4));
+            } else {
+                pattern.push(obj.pattern.split(", ").map(item => item.trim()).slice(0, 4));
+            }
+            if (Array.isArray(obj.japanese)) {
+                solutions.push(obj.japanese.slice(0, 4));
+            } else {
+                solutions.push(obj.japanese.split(", ").map(item => item.trim()).slice(0, 4));
+            }
+            if (Array.isArray(obj.english)) {
+                meanings.push(obj.english.slice(0, 4));
+            } else {
+                meanings.push(obj.english.split(", ").map(item => item.trim()).slice(0, 4));
+            }
+        });
     }
     // console.log(pattern);
     // console.log(solutions);
@@ -173,11 +165,16 @@ const fetchConnectionsFromStorage = async (key) => {
 // Step 2
 function backend(pageNumber){
     showGridLoading(true);
-    
-    fetchConnectionsFromStorage(pageNumber).then(result => {
-        // Use the result here
-        
 
+    console.log("fetchConnectionsFromStorage: ",'gemma-' + pageNumber);
+    var data = getFromLocalStorage('gemma-' + pageNumber);
+    if (!data) {
+        fetchFromLLM();
+    }
+    console.log("Retry fetchConnectionsFromStorage: ",'gemma-' + pageNumber);
+    data = getFromLocalStorage('gemma-' + pageNumber);
+    fetchConnectionsFromStorage(data).then(result => {
+        // Use the result here
         gl_pattern=result.pattern;
         gl_solutions=result.solutions;
         gl_meanings=result.meanings;
