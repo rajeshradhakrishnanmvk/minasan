@@ -13,7 +13,7 @@ function fetchFromLLM(){
         fetchFromLLMPrompt().then(examples_prompt => {
             //console.log(master_prompt);
             //console.log(examples_prompt);
-            fetchConnectionsFromGemma(master_prompt, examples_prompt,key).then((gemmaresponse) => {
+            fetchConnectionsFromGemma(master_prompt, examples_prompt).then((gemmaresponse) => {
                 gamecount++; //global variable to keep track of the number of games played, ref games.js
                 saveToLocalStorage('gemma-' + gamecount,gemmaresponse);
                 //saveToLocalStorage(keyPrefix + gamecount,gemmaresponse);
