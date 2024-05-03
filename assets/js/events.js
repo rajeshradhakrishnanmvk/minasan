@@ -35,10 +35,16 @@ function nextPage() {
         backend(nextPage);
     } else {
         console.log("No next page available.");
-        backend(nextPage);
     }
 }
 
 function refreshPage(){
     location.reload();
+
+}
+
+function fetchGame()
+{
+    console.log("Fetching game...", gamecount);
+    backend(gamecount + 1);
 }

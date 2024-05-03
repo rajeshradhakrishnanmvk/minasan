@@ -1,22 +1,62 @@
-[
-    {
-        "Pattern": "Lesson-1E",
-        "Japanese": "はじめまして (hajimemashite), インドから きました (indo kara kimashita), どうぞよろしく (dōzo yoroshiku), しつれいします (shitsurei shimasu)",
-        "English": "how do you do?, I'm from India, Please to meet you, Excuse me"
-    },
-    {
-        "Pattern": "Lesson-1F",
-        "Japanese": "おなまえは？ (o-namae wa?), ～さんです (～san desu), せんせい (sensei), きょうし (kyōshi)",
-        "English": "May I have your name?, This is Mr./Mrs Rajesh, instructor, teacher"
-    },
-    {
-        "Pattern": "Lesson-1G",
-        "Japanese": "アメリカ (amerika), イギリス (igirisu), インド (indo),インドネシア (indoneshia)",
-        "English": "U.S.A, U.K., India, Indonesia"
-    },
-    {
-        "Pattern": "Lesson-1H",
-        "Japanese": "かんこく (kankoku), タイ (tai), ちゅうごく (chūgoku), ドイツ (doitsu)",
-        "English": "South Korea, Thailand, China, Germany"
-    }
-]
+{
+    "connections": [
+        {
+            "Pattern": "introductions",
+            "Japanese": "はじめまして,わたしは______です,よろしくおねがいします,どうぞよろしく",
+            "English": "Nice to meet you, I am ____, pleased to meet you, please"
+        },
+        {
+            "Pattern": "basic phrases",
+            "Japanese": "こんにちは,ありがとう,すみません,ごめんなさい",
+            "English": "Hello, thank you, excuse me, I'm sorry"
+        },
+        {
+            "Pattern": "asking for directions",
+            "Japanese": "すみません,______はどこですか？,_____への行き方を教えてください",
+            "English": "Excuse me, where is ____, please tell me how to get to ____"
+        },
+        {
+            "Pattern": "ordering food",
+            "Japanese": "メニューをください,これをください,お勧めは何ですか？,お会計をお願いします",
+            "English": "Please give me the menu, I'll have this, what do you recommend? Please give me the bill"
+        }
+    ],
+    "conversation": [
+        {
+            "speaker": "Newcomer",
+            "japanese": "はじめまして、わたしはジョンです。よろしくおねがいします。",
+            "romaji": "Hajimemashite, watashi wa Jon desu. Yoroshiku onegaishimasu.",
+            "english": "Nice to meet you, I'm John. Pleased to meet you."
+        },
+        {
+            "speaker": "Local",
+            "japanese": "はじめまして、日本へようこそ。どうぞよろしく。",
+            "romaji": "Hajimemashite, Nihon e yōkoso. Dōzo yoroshiku.",
+            "english": "Nice to meet you, welcome to Japan. Please"
+        },
+        {
+            "speaker": "Newcomer",
+            "japanese": "すみません、駅はどこですか？",
+            "romaji": "Sumimasen, eki wa doko desu ka?",
+            "english": "Excuse me, where is the train station?"
+        },
+        {
+            "speaker": "Local",
+            "japanese": "駅はまっすぐ行って右に曲がってください。",
+            "romaji": "Eki wa massugu itte migi ni magatte kudasai.",
+            "english": "Go straight to the station and turn right."
+        },
+        {
+            "speaker": "Newcomer",
+            "japanese": "ありがとうございます、とても助かります。",
+            "romaji": "Arigatō gozaimasu, totemo tasukarimasu.",
+            "english": "Thank you very much, it's very helpful."
+        },
+        {
+            "speaker": "Local",
+            "japanese": "どういたしまして、お気をつけて。",
+            "romaji": "Dōitashimashite, oki o tsukete.",
+            "english": "You're welcome, take care."
+        }
+    ]
+}

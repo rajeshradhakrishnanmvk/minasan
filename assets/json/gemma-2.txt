@@ -1,22 +1,62 @@
-[
+{
+  "connections": [
     {
-        "Pattern": "Lesson-1A",
-        "Japanese": "わたし (watashi), あなた (anata), あのかた (ano kata), さん (san)",
-        "English": "I, you, that person, Mr/Ms/Mrs"
+      "Pattern": "greetings and expressions",
+      "Japanese": "こんにちは,ありがとうございます,どういたしまして,おねがいします",
+      "English": "Hello, thank you, you're welcome, please"
     },
     {
-        "Pattern": "Lesson-1B",
-        "Japanese": "がくせい (gakusei), かいしゃいん (kaishain), ぎんこういん (ginkōin), きゅうさい (kyū sai)",
-        "English": "student, company employee, bank employee, 9 years old"
+      "Pattern": "shopping terms",
+      "Japanese": "かばん,くつ,じてんしゃ,くるま",
+      "English": "bag, shoes, bicycle, car"
     },
     {
-        "Pattern": "Lesson-1C",
-        "Japanese": "いしゃ (isha), がくしゃ (gakusha), だいがく (daigaku), びょういん (byōin)",
-        "English": "doctor, scholar, university, hospital"
+      "Pattern": "price inquiries",
+      "Japanese": "いくら,やすい,たかい,ちょっと",
+      "English": "how much, cheap, expensive, a little"
     },
     {
-        "Pattern": "Lesson-1D",
-        "Japanese": "だれ (dare), なんさい (nansai), はい (hai), いいえ (iie)",
-        "English": "who, how old, yes, no"
+      "Pattern": "expressions of gratitude",
+      "Japanese": "ありがとう,どうも,助かります,感謝します",
+      "English": "thank you, thanks, it helps, I appreciate it"
     }
-]
+  ],
+  "conversation": [
+    {
+      "speaker": "Customer",
+      "japanese": "こんにちは,このかばんはいくらですか？",
+      "romaji": "Konnichiwa, kono kaban wa ikura desu ka?",
+      "english": "Hello, how much is this bag?"
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "それは２０００円です。",
+      "romaji": "Sore wa nisen-en desu.",
+      "english": "That's 2000 yen."
+    },
+    {
+      "speaker": "Customer",
+      "japanese": "やすいですね,それをください。",
+      "romaji": "Yasui desu ne, sore o kudasai.",
+      "english": "It's cheap, I'll take it."
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "ありがとうございます,お会計はこちらでお願いします。",
+      "romaji": "Arigatō gozaimasu, okaikei wa kochira de onegaishimasu.",
+      "english": "Thank you, please pay here."
+    },
+    {
+      "speaker": "Customer",
+      "japanese": "どうも,助かります。",
+      "romaji": "Dōmo, tasukarimasu.",
+      "english": "Thanks, it helps."
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "またのご利用をお待ちしております。",
+      "romaji": "Mata no goriyō o omachi shiteorimasu.",
+      "english": "We look forward to serving you again."
+    }
+  ]
+}

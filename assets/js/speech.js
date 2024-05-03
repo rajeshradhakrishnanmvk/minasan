@@ -1,15 +1,8 @@
-
-
-
 // Function to populate conversation div from JSON content
 function populateConversation() {
     const conversationDiv = document.querySelector('.conversation');
     conversationDiv.innerHTML = ''; // Clear child elements
-    if (typeof conversationData === 'string') {
-        conversationData = JSON.parse(conversationData);
-    }
-
-    conversationData.conversation.forEach(message => {
+    conversationData.forEach(message => {
         const messageDiv = document.createElement('div');
         //console.log(message);
         messageDiv.classList.add('message');
@@ -18,12 +11,24 @@ function populateConversation() {
         senderSpan.classList.add('sender');
         senderSpan.textContent = `${message.speaker}:`;
 
-        const contentSpan = document.createElement('span');
-        contentSpan.classList.add('content');
-        contentSpan.textContent = message.text;
+        const japaneseSpan = document.createElement('span');
+        japaneseSpan.classList.add('content');
+        japaneseSpan.textContent = message.japanese;
+
+        const romajiSpan = document.createElement('span');
+        romajiSpan.classList.add('content');
+        romajiSpan.textContent = message.romaji;
+
+        const englishSpan = document.createElement('span');
+        englishSpan.classList.add('content');
+        englishSpan.textContent = message.english;
 
         messageDiv.appendChild(senderSpan);
-        messageDiv.appendChild(contentSpan);
+        messageDiv.appendChild(japaneseSpan);
+        messageDiv.appendChild(document.createElement('br'));
+        messageDiv.appendChild(romajiSpan);
+        messageDiv.appendChild(document.createElement('br'));
+        messageDiv.appendChild(englishSpan);
 
         conversationDiv.appendChild(messageDiv);
     });
@@ -31,7 +36,7 @@ function populateConversation() {
 
 
     //play
-    play_btn.addEventListener('click', () => speakConversation(1.3));
+    play_btn.addEventListener('click', () => speakConversation(1));
 }
 const pause_btn = document.querySelector('#pause-btn');
 const resume_btn = document.querySelector('#resume-btn');
@@ -42,7 +47,7 @@ function speakConversation(speed) {
 
     const utterance = new SpeechSynthesisUtterance();
     utterance.lang = 'ja-JP'; // Set language to Japanese
-    const conversation = conversationData.conversation.map(message => `${message.speaker} says ${message.text}`);
+    const conversation = conversationData.map(message => `${message.speaker} says ${message.japanese}`);
     utterance.text = conversation.join('. ');
     utterance.rate=speed;
     speechSynthesis.speak(utterance);

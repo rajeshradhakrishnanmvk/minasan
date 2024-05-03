@@ -22,11 +22,29 @@ function shuffleTwoDimensionalArray(arr) {
 // Step 8 A
 // used in Step 2 backend calls shuffleTwoArrays
 function shuffleTwoArrays(A, B) {
+    const mergedArray = [];
+    for (let i = 0; i < A.length; i++) {
+        const mergedRow = [];
+        for (let j = 0; j < A[i].length; j++) {
+            mergedRow.push(`${A[i][j]}-${B[i][j]}`);
+        }
+        mergedArray.push(mergedRow);
+    }
     // Shuffle arrays A and B while preserving relationships between corresponding elements
-    const shuffledA = shuffleTwoDimensionalArray(A);
-    const shuffledB = shuffleTwoDimensionalArray(B);
-    console.log(shuffledA);
-    console.log(shuffledB);
+    const shuffledAB = shuffleTwoDimensionalArray(mergedArray);
+    const shuffledA = [];
+    const shuffledB = [];
+    for (let i = 0; i < shuffledAB.length; i++) {
+        const rowA = [];
+        const rowB = [];
+        for (let j = 0; j < shuffledAB[i].length; j++) {
+            const [a, b] = shuffledAB[i][j].split("-");
+            rowA.push(a);
+            rowB.push(b);
+        }
+        shuffledA.push(rowA);
+        shuffledB.push(rowB);
+    }
     return [shuffledA, shuffledB];
 }
 
@@ -52,14 +70,14 @@ function findPattern(clickedPositions, shuffledArray, pattern, originalArray) {
         return "Keep clicking to select four consecutive positions.";
     }
     const clickedWords = clickedPositions.map(pos => shuffledArray[pos.row][pos.column]);
-    console.log("Clicked words:", clickedWords);
+    //console.log("Clicked words:", clickedWords);
     let patternIndex = -1;
     for (let i = 0; i < originalArray.length; i++) {
-        console.log(originalArray[i])
+        //console.log(originalArray[i])
         const indices = originalArray[i].map(word => clickedWords.indexOf(word));
       
         const sortedIndices = indices.slice().sort((a, b) => a - b); // Sort indices to find consecutive clicks
-        console.log("Indices:", sortedIndices);
+        //console.log("Indices:", sortedIndices);
         if (sortedIndices.every((index, idx) => idx === 0 || (index === sortedIndices[idx - 1] + 1))) {
             patternIndex = i;
             break;
@@ -86,7 +104,7 @@ function boardSetup() {
             card.addEventListener('click', () => {
                 const i = Array.from(row.parentNode.children).indexOf(row);
                 const j = Array.from(row.children).indexOf(card);
-                console.log(`Clicked on card at position (${i}, ${j})`);
+                //console.log(`Clicked on card at position (${i}, ${j})`);
                 
                 // Store the clicked position
                 clickedPositions.push({ row: i, column: j });
@@ -101,13 +119,6 @@ function boardSetup() {
                     // Reset clickedPositions after finding the pattern
                     const jn_words = clickedPositions.map(pos => gamewords[i][j]);
                     clickedPositions = [];
-                    fetchConversationFromLLM(patternFound, jn_words).then(conversationGeminiData => {
-                        if (conversationGeminiData) {
-                            conversationData = conversationGeminiData;
-                            populateConversation();
-                        }
-                    });
-                    
                 }   
             });
         }
@@ -129,9 +140,6 @@ const fetchConnectionsFromStorage = async (data) => {
     const pattern = [];
     const solutions = [];
     const meanings = [];
-    data = data.toLowerCase(); // Convert data to lowercase
-    data = JSON.parse(cleanJson(data));
-    
     if (data && data.patterns) {
         data = data.patterns;
     } 
@@ -169,62 +177,39 @@ function backend(pageNumber){
     console.log("fetchConnectionsFromStorage: ",'gemma-' + pageNumber);
     var data = getFromLocalStorage('gemma-' + pageNumber);
     if (!data) {
-        fetchFromLLM();
+        gamecount++; //global variable to keep track of the number of games played, ref games.js
+        const fileName = 'json/gemma-'+ gamecount +'.txt';
+        fetchFromLLM(fileName);
     }
     console.log("Retry fetchConnectionsFromStorage: ",'gemma-' + pageNumber);
-    data = getFromLocalStorage('gemma-' + pageNumber);
-    fetchConnectionsFromStorage(data).then(result => {
-        // Use the result here
-        gl_pattern=result.pattern;
-        gl_solutions=result.solutions;
-        gl_meanings=result.meanings;
-        [gamewords,gamemeaning] = shuffleTwoArrays(gl_solutions,gl_meanings);
+    data = JSON.parse(cleanJson(getFromLocalStorage('gemma-' + pageNumber).toLowerCase()));
+    if(data && data.connections && data.connections.length > 0)
+    {
+        fetchConnectionsFromStorage(data.connections).then(result => {
+            // Use the result here
+            gl_pattern=result.pattern;
+            gl_solutions=result.solutions;
+            gl_meanings=result.meanings;
+            [gamewords,gamemeaning] = shuffleTwoArrays(gl_solutions,gl_meanings);
+            
+            boardSetup();
+            if (data.conversation && data.conversation.length > 0){
+                conversationData = data.conversation;
+                populateConversation()
+            }
+            showGridLoading(false);
         
-        boardSetup();
-       
-      }).catch(error => {
-        // Handle any errors here
-        console.error('Error:', error);
-      });
-      showGridLoading(false);
+        }).catch(error => {
+            // Handle any errors here
+            console.error('Error:', error);
+        });
+    }
+
 }
 // Step 1
 function fetchConnectionsFromAI() {
     gamecount = Object.keys(localStorage).filter(key => key.startsWith('gemma-')).length;
     console.log("fetchConnectionsFromAI: ",gamecount);
     backend(1)
-    // Call the function to populate conversation
-    populateConversation(conversationData);
     return
 }
-
-
-// /// Function to shuffle two arrays of words and ensure the English meaning matches the shuffled Japanese word
-// function shuffleAndMatchJapaneseEnglish(japaneseArray, englishArray) {
-//     // Shuffle both arrays simultaneously using Fisher-Yates algorithm
-
-
-//     // Shuffle both arrays simultaneously row-wise
-//     for (let i = 0; i < japaneseArray.length; i++) {
-//         for (let j = japaneseArray[i].length - 1; j > 0; j--) {
-//             const k = Math.floor(Math.random() * (j + 1));
-//             [japaneseArray[i][j], japaneseArray[i][k]] = [japaneseArray[i][k], japaneseArray[i][j]];
-//             [englishArray[i][j], englishArray[i][k]] = [englishArray[i][k], englishArray[i][j]];
-//         }
-//     }
-//         for (let i = japaneseArray.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [japaneseArray[i], japaneseArray[j]] = [japaneseArray[j], japaneseArray[i]];
-//         [englishArray[i], englishArray[j]] = [englishArray[j], englishArray[i]];
-//     }
-
-//     return [japaneseArray, englishArray];
-// }
-// // Function to shuffle two arrays while preserving relationships between corresponding elements
-// function shuffleTwoArrays(A, B) {
-//     // Flatten both arrays and shuffle the flattened arrays
-//     [shuffledA,shuffledB] = shuffleAndMatchJapaneseEnglish(A,B);
-//     console.log(shuffledA);
-//     console.log(shuffledB);
-//     return [shuffledA, shuffledB];
-// }
