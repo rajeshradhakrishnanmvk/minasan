@@ -178,7 +178,7 @@ function backend(pageNumber){
     var data = getFromLocalStorage('gemma-' + pageNumber);
     if (!data) {
         gamecount++; //global variable to keep track of the number of games played, ref games.js
-        const fileName = 'json/gemma-'+ gamecount +'.txt';
+        const fileName = 'https://rajeshradhakrishnanmvk.github.io/minasan/assets/json/gemma-'+ gamecount +'.txt';
         fetchFromLLM(fileName);
     }
     console.log("Retry fetchConnectionsFromStorage: ",'gemma-' + pageNumber);
