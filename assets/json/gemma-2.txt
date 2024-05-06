@@ -1,62 +1,50 @@
 {
-  "connections": [
-    {
-      "Pattern": "greetings and expressions",
-      "Japanese": "こんにちは,ありがとうございます,どういたしまして,おねがいします",
-      "English": "Hello, thank you, you're welcome, please"
-    },
-    {
-      "Pattern": "shopping terms",
-      "Japanese": "かばん,くつ,じてんしゃ,くるま",
-      "English": "bag, shoes, bicycle, car"
-    },
-    {
-      "Pattern": "price inquiries",
-      "Japanese": "いくら,やすい,たかい,ちょっと",
-      "English": "how much, cheap, expensive, a little"
-    },
-    {
-      "Pattern": "expressions of gratitude",
-      "Japanese": "ありがとう,どうも,助かります,感謝します",
-      "English": "thank you, thanks, it helps, I appreciate it"
-    }
-  ],
-  "conversation": [
-    {
-      "speaker": "Customer",
-      "japanese": "こんにちは,このかばんはいくらですか？",
-      "romaji": "Konnichiwa, kono kaban wa ikura desu ka?",
-      "english": "Hello, how much is this bag?"
-    },
-    {
-      "speaker": "Staff",
-      "japanese": "それは２０００円です。",
-      "romaji": "Sore wa nisen-en desu.",
-      "english": "That's 2000 yen."
-    },
-    {
-      "speaker": "Customer",
-      "japanese": "やすいですね,それをください。",
-      "romaji": "Yasui desu ne, sore o kudasai.",
-      "english": "It's cheap, I'll take it."
-    },
-    {
-      "speaker": "Staff",
-      "japanese": "ありがとうございます,お会計はこちらでお願いします。",
-      "romaji": "Arigatō gozaimasu, okaikei wa kochira de onegaishimasu.",
-      "english": "Thank you, please pay here."
-    },
-    {
-      "speaker": "Customer",
-      "japanese": "どうも,助かります。",
-      "romaji": "Dōmo, tasukarimasu.",
-      "english": "Thanks, it helps."
-    },
-    {
-      "speaker": "Staff",
-      "japanese": "またのご利用をお待ちしております。",
-      "romaji": "Mata no goriyō o omachi shiteorimasu.",
-      "english": "We look forward to serving you again."
-    }
-  ]
+    "connections": [
+        {
+            "pattern": "buying",
+            "Japanese": "かう, みる, ひく, しる",
+            "english": "buy, look, discount, know"
+        },
+        {
+            "pattern": "paying",
+            "Japanese": "はらう, カード, おかね, つりあわせ",
+            "english": "pay, card, money, balance"
+        },
+        {
+            "pattern": "asking",
+            "Japanese": "きく, きょうりょく, しつもん, じぶん",
+            "english": "ask, assistance, question, self"
+        },
+        {
+            "pattern": "greeting",
+            "Japanese": "あいさつ, いらっしゃいませ, こんいちは, ありがとう",
+            "english": "greeting, welcome, hello, thank you"
+        }
+    ],
+    "conversation": [
+        {
+            "speaker": "あきこ",
+            "Japanese": "いらっしゃいませ。 なにをみますか。",
+            "Romaji": "Irasshaimase. Nani o mimasuka.",
+            "english": "Welcome. What are you looking at?"
+        },
+        {
+            "speaker": "たけし",
+            "Japanese": "りんごをかいます。",
+            "Romaji": "Ringo o kaimasu.",
+            "english": "I will buy apples."
+        },
+        {
+            "speaker": "あきこ",
+            "Japanese": "おかねはいくらですか。",
+            "Romaji": "Okane wa ikura desuka.",
+            "english": "How much is it?"
+        },
+        {
+            "speaker": "たけし",
+            "Japanese": "￥３００です。",
+            "Romaji": "Sanbyaku desu.",
+            "english": "It's 300 yen."
+        }
+    ]
 }

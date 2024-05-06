@@ -1,62 +1,50 @@
 {
-        "connections": [
-            {
-                "Pattern": "personal pronouns and honorifics",
-                "Japanese": "わたし (watashi), あなた (anata), あのかた (ano kata), さん (san)",
-                "English": "I, you, that person, Mr/Ms/Mrs"
-            },
-            {
-                "Pattern": "Lesson-1B",
-                "Japanese": "がくせい (gakusei), かいしゃいん (kaishain), ぎんこういん (ginkōin), きゅうさい (kyū sai)",
-                "English": "student, company employee, bank employee, 9 years old"
-            },
-            {
-                "Pattern": "Lesson-1C",
-                "Japanese": "いしゃ (isha), がくしゃ (gakusha), だいがく (daigaku), びょういん (byōin)",
-                "English": "doctor, scholar, university, hospital"
-            },
-            {
-                "Pattern": "Lesson-1D",
-                "Japanese": "だれ (dare), なんさい (nansai), はい (hai), いいえ (iie)",
-                "English": "who, how old, yes, no"
-            }
-        ],
-        "conversation": [
-            {
-                "speaker": "やまだ",
-                "japanese": " はい、どちらさまですか？。",
-                "romaji": " Hai, dochira-sama desu ka?",
-                "english": "Yes, who is it?"
-            },
-            {
-                "speaker": "さんとす",
-                "japanese": "よんひゃくはちごうしつのほせ さんとすです。",
-                "romaji": "Yon-hyaku-hachi-gōshitsu no Hose Santosu desu.",
-                "english": "It's Jose Santos, from 408."
-            },
-            {
-                "speaker": "さんとす",
-                "japanese": "はじめまして、ほせ さんとすです。ひっこしてきたばかりです。どうぞよろしくおねがいします。",
-                "romaji": "Hajimemashite, Hose Santosu desu. Hikkoshite kita bakari desu. Dōzo yoroshiku onegaishimasu.",
-                "english": "Hello, I'm Jose Santos. I've just moved in. Thank you in advance for your kindness."
-            },
-            {
-                "speaker": "やまだ",
-                "japanese": "こちらこそ、はじめまして。",
-                "romaji": "Kochira koso, hajimemashite.",
-                "english": "Pleased to meet you, too."
-            },
-            {
-                "speaker": "さんとす",
-                "japanese": "これ、こーひーです。どうぞ。",
-                "romaji": "Kore, Kōhī desu. Dōzo.",
-                "english": "Here's some coffee for you."
-            },
-            {
-                "speaker": "やまだ",
-                "japanese": "ありがとうございます。",
-                "romaji": "Arigatō gozaimasu.",
-                "english": "Thank you very much."
-            }
-        ]
+    "connections": [
+        {
+            "pattern": "Colors",
+            "Japanese": "あか,あお,きいろ,みどり",
+            "english": "Red, Blue, Yellow, Green"
+        },
+        {
+            "pattern": "Numbers",
+            "Japanese": "いち,に,さん,よん",
+            "english": "One, Two, Three, Four"
+        },
+        {
+            "pattern": "Animals",
+            "Japanese": "いぬ,ねこ,うさぎ,とり",
+            "english": "Dog, Cat, Rabbit, Bird"
+        },
+        {
+            "pattern": "Fruits",
+            "Japanese": "りんご,ばなな,みかん,すいか",
+            "english": "Apple, Banana, Orange, Watermelon"
+        }
+    ],
+    "conversation": [
+        {
+            "speaker": "せんせい",
+            "Japanese": "こんにちは、今日は基本的な日本語の語彙を勉強します。",
+            "Romaji": "konnichiwa, kyou wa kihonteki na nihongo no goi wo benkyou shimasu.",
+            "english": "Hello, today we will study basic Japanese vocabulary."
+        },
+        {
+            "speaker": "がくせい",
+            "Japanese": "いちから十までの数字を覚えたいです。",
+            "Romaji": "ichi kara juu made no suuji wo oboetai desu.",
+            "english": "I want to learn numbers from one to ten."
+        },
+        {
+            "speaker": "せんせい",
+            "Japanese": "もちろん、数字はとても重要です。それから、色や動物、果物も学びましょう。",
+            "Romaji": "mochiron, suuji wa totemo juuyou desu. sorekara, iro ya doubutsu, kudamono mo manabimashou.",
+            "english": "Of course, numbers are very important. Let's also learn about colors, animals, and fruits."
+        },
+        {
+            "speaker": "がくせい",
+            "Japanese": "わかりました。楽しく学ぶことができるといいです。",
+            "Romaji": "wakarimashita. tanoshiku manabu koto ga dekiru to ii desu.",
+            "english": "Understood. It would be great to learn in a fun way."
+        }
+    ]
 }

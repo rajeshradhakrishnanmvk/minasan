@@ -34,14 +34,11 @@ function nextPage() {
         currentPage = nextPage;
         backend(nextPage);
     } else {
+        fetchGame();
         console.log("No next page available.");
     }
 }
 
-function refreshPage(){
-    location.reload();
-
-}
 
 function fetchGame()
 {

@@ -1,62 +1,50 @@
 {
     "connections": [
         {
-            "Pattern": "introductions",
-            "Japanese": "はじめまして,わたしは______です,よろしくおねがいします,どうぞよろしく",
-            "English": "Nice to meet you, I am ____, pleased to meet you, please"
+            "pattern": "Discussion",
+            "Japanese": "ひとしり,いちゃく,なっか,あつかい",
+            "english": "Introduction, Discussion, Summary, Handling"
         },
         {
-            "Pattern": "basic phrases",
-            "Japanese": "こんにちは,ありがとう,すみません,ごめんなさい",
-            "English": "Hello, thank you, excuse me, I'm sorry"
+            "pattern": "Decision Making",
+            "Japanese": "あんない,かくにん,けっしん,ぱんだん",
+            "english": "Guidance, Confirmation, Decision, Judgment"
         },
         {
-            "Pattern": "asking for directions",
-            "Japanese": "すみません,______はどこですか？,_____への行き方を教えてください",
-            "English": "Excuse me, where is ____, please tell me how to get to ____"
+            "pattern": "Problem Solving",
+            "Japanese": "いけん,ぶんかい,けっか,さいせい",
+            "english": "Opinion, Solution, Result, Improvement"
         },
         {
-            "Pattern": "ordering food",
-            "Japanese": "メニューをください,これをください,お勧めは何ですか？,お会計をお願いします",
-            "English": "Please give me the menu, I'll have this, what do you recommend? Please give me the bill"
+            "pattern": "Feedback",
+            "Japanese": "しあい,ふかい,ぎょうせき,ふくしゅう",
+            "english": "Inquiry, Deepening, Achievement, Review"
         }
     ],
     "conversation": [
         {
-            "speaker": "Newcomer",
-            "japanese": "はじめまして、わたしはジョンです。よろしくおねがいします。",
-            "romaji": "Hajimemashite, watashi wa Jon desu. Yoroshiku onegaishimasu.",
-            "english": "Nice to meet you, I'm John. Pleased to meet you."
+            "speaker": "せんせい",
+            "Japanese": "こんにちは、 ソフトウェアミーティングの重要性を強調します。",
+            "Romaji": "konnichiwa, sofutowea miitingu no juuyousei wo kyouchou shimasu.",
+            "english": "Hello, I will emphasize the importance of software meetings."
         },
         {
-            "speaker": "Local",
-            "japanese": "はじめまして、日本へようこそ。どうぞよろしく。",
-            "romaji": "Hajimemashite, Nihon e yōkoso. Dōzo yoroshiku.",
-            "english": "Nice to meet you, welcome to Japan. Please"
+            "speaker": "がくせい",
+            "Japanese": "はい、それは良い考えです。ソフトウェア開発チームでの効果的なコミュニケーションが必要です。",
+            "Romaji": "hai, sore wa yoi kangae desu. sofutowea kaihatsu chīmu de no koukateki na komyunikēshon ga hitsuyou desu.",
+            "english": "Yes, that's a good idea. Effective communication in the software development team is necessary."
         },
         {
-            "speaker": "Newcomer",
-            "japanese": "すみません、駅はどこですか？",
-            "romaji": "Sumimasen, eki wa doko desu ka?",
-            "english": "Excuse me, where is the train station?"
+            "speaker": "せんせい",
+            "Japanese": "正確な情報の共有とアイディアの交換が重要です。",
+            "Romaji": "seikaku na jouhou no kyouchi to aidia no koukan ga juuyou desu.",
+            "english": "Sharing accurate information and exchanging ideas is important."
         },
         {
-            "speaker": "Local",
-            "japanese": "駅はまっすぐ行って右に曲がってください。",
-            "romaji": "Eki wa massugu itte migi ni magatte kudasai.",
-            "english": "Go straight to the station and turn right."
-        },
-        {
-            "speaker": "Newcomer",
-            "japanese": "ありがとうございます、とても助かります。",
-            "romaji": "Arigatō gozaimasu, totemo tasukarimasu.",
-            "english": "Thank you very much, it's very helpful."
-        },
-        {
-            "speaker": "Local",
-            "japanese": "どういたしまして、お気をつけて。",
-            "romaji": "Dōitashimashite, oki o tsukete.",
-            "english": "You're welcome, take care."
+            "speaker": "がくせい",
+            "Japanese": "ありがとうございます。私たちは進捗状況を説明し、次のステップを決定する必要があります。",
+            "Romaji": "arigatou gozaimasu. watashitachi wa shinchoku joukyou wo setsumei shi, tsugi no suteppu wo kettei suru hitsuyou ga arimasu.",
+            "english": "Thank you. We need to explain the progress status and decide the next steps."
         }
     ]
 }
