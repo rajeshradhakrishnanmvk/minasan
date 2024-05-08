@@ -1,0 +1,50 @@
+{
+    "connections": [
+        {
+            "pattern": "one",
+            "Japanese": "はな,くさ,き,いき",
+            "english": "flower,grass,tree,life"
+        },
+        {
+            "pattern": "two",
+            "Japanese": "みず,おおぞら,たいよう,りく",
+            "english": "water,sky,sun,land"
+        },
+        {
+            "pattern": "three",
+            "Japanese": "いろ,くさ,くさき,やま",
+            "english": "color,grass,stem,mountain"
+        },
+        {
+            "pattern": "four",
+            "Japanese": "うみ,あさ,さくら,やま",
+            "english": "sea,morning,cherry blossom,mountain"
+        }
+    ],
+    "conversation": [
+        {
+            "speaker": "ひとし",
+            "Japanese": "はなのいろはなんいろですか？",
+            "Romaji": "hana no iro wa nan'iro desu ka?",
+            "english": "What color are the flowers?"
+        },
+        {
+            "speaker": "ゆか",
+            "Japanese": "はなはいろいろです。あか、あお、きいろなどがありますよ。",
+            "Romaji": "hana wa iroiro desu. aka, ao, kiiro nado ga arimasu yo.",
+            "english": "Flowers come in various colors like red, blue, yellow, and more."
+        },
+        {
+            "speaker": "ひとし",
+            "Japanese": "そうですか。ほんとうにきれいですね。",
+            "Romaji": "sou desu ka. hontou ni kirei desu ne.",
+            "english": "I see. They are really beautiful, aren't they?"
+        },
+        {
+            "speaker": "ゆか",
+            "Japanese": "はい、さくらもとてもきれいです。",
+            "Romaji": "hai, sakura mo totemo kirei desu.",
+            "english": "Yes, cherry blossoms are also very beautiful."
+        }
+    ]
+}
